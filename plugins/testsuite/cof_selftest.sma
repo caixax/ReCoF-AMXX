@@ -6,6 +6,7 @@
 #include <fakemeta>
 #include <engine>
 #include <hamsandwich>
+#include <cof>
 
 new g_bot;
 new g_spawned;
@@ -116,6 +117,11 @@ public cmd_selftest()
 	pev(g_bot, pev_health, after);
 	formatex(detail, charsmax(detail), "100 -> %.1f", after);
 	check(after < 100.0, "the game took the damage", detail);
+
+	// cof.inc
+	new version[16];
+	check(cof_is_game() && cof_is_weapon("weapon_glock") && cof_is_monster("monster_slower") && !cof_is_weapon("weapon_crowbar"), "cof.inc names");
+	check(!cof_get_recof_version(g_bot, version, charsmax(version)), "a bot sends no _recof key");
 
 	// Cry of Fear's GiveAmmo has a fourth parameter: its own key, and Half-Life's is not offered
 	check(IsHamValid(Ham_CoF_GiveAmmo) && !IsHamValid(Ham_GiveAmmo), "Ham_CoF_GiveAmmo offered, Half-Life's Ham_GiveAmmo not");

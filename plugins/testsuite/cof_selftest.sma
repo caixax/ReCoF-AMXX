@@ -13,6 +13,7 @@ new g_hurt;
 new Float:g_hurtDamage;
 new g_hurtVictim;
 new g_failures;
+new g_ammoCalls, g_ammoAmount, g_ammoMax, g_ammoNoMessage, g_ammoName[32];
 
 public plugin_init()
 {
@@ -20,6 +21,7 @@ public plugin_init()
 	register_srvcmd("cof_selftest", "cmd_selftest");
 	RegisterHam(Ham_Spawn, "player", "fw_spawn_post", 1);
 	RegisterHam(Ham_TakeDamage, "player", "fw_takedamage", 0);
+	RegisterHam(Ham_CoF_GiveAmmo, "player", "fw_giveammo", 0);
 }
 
 public fw_spawn_post(id)
@@ -35,6 +37,19 @@ public fw_takedamage(victim, inflictor, attacker, Float:damage, damagebits)
 		g_hurt++;
 		g_hurtVictim = victim;
 		g_hurtDamage = damage;
+	}
+	return HAM_IGNORED;
+}
+
+public fw_giveammo(id, amount, const name[], max, noMessage)
+{
+	if (id == g_bot)
+	{
+		g_ammoCalls++;
+		g_ammoAmount = amount;
+		g_ammoMax = max;
+		g_ammoNoMessage = noMessage;
+		copy(g_ammoName, charsmax(g_ammoName), name);
 	}
 	return HAM_IGNORED;
 }
@@ -101,6 +116,13 @@ public cmd_selftest()
 	pev(g_bot, pev_health, after);
 	formatex(detail, charsmax(detail), "100 -> %.1f", after);
 	check(after < 100.0, "the game took the damage", detail);
+
+	// Cry of Fear's GiveAmmo has a fourth parameter: its own key, and Half-Life's is not offered
+	check(IsHamValid(Ham_CoF_GiveAmmo) && !IsHamValid(Ham_GiveAmmo), "Ham_CoF_GiveAmmo offered, Half-Life's Ham_GiveAmmo not");
+	g_ammoCalls = 0;
+	ExecuteHamB(Ham_CoF_GiveAmmo, g_bot, 7, "cof_selftest_ammo", 50, 1);
+	formatex(detail, charsmax(detail), "calls %d, amount %d, name %s, max %d, noMessage %d", g_ammoCalls, g_ammoAmount, g_ammoName, g_ammoMax, g_ammoNoMessage);
+	check(g_ammoCalls == 1 && g_ammoAmount == 7 && equal(g_ammoName, "cof_selftest_ammo") && g_ammoMax == 50 && g_ammoNoMessage == 1, "Ham_CoF_GiveAmmo hook got its four parameters", detail);
 
 	server_print("[cof_selftest] %s, %d failed", g_failures ? "FAILED" : "all passed", g_failures);
 	return PLUGIN_HANDLED;

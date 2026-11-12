@@ -35,6 +35,20 @@ KeyValueData *g_pkvd;
 bool g_inKeyValue=false;
 bool g_precachedStuff = false;
 
+// The set_view camera needs a model, and models/rpgrocket.mdl is Half-Life's. A game without it (Cry of Fear) had its
+// server stopped by the precache, so such a game gets models/error.mdl; the camera is invisible either way.
+const char *g_CameraModel = "models/rpgrocket.mdl";
+
+static bool GameHasFile(const char *path)
+{
+	int length = 0;
+	byte *data = g_engfuncs.pfnLoadFileForMe(const_cast<char *>(path), &length);
+	if (!data)
+		return false;
+	g_engfuncs.pfnFreeFile(data);
+	return true;
+}
+
 int fstrcmp(const char *s1, const char *s2)
 {
 	int i=0;
@@ -54,7 +68,9 @@ int Spawn(edict_t *pEntity)
 {
 	if (!g_precachedStuff) {
 		// Used for SetView, added by JGHG
-		PRECACHE_MODEL("models/rpgrocket.mdl");
+		if (!GameHasFile(g_CameraModel))
+			g_CameraModel = "models/error.mdl";
+		PRECACHE_MODEL(g_CameraModel);
 		g_precachedStuff = true;
 	}
 	if (SpawnForward != -1)

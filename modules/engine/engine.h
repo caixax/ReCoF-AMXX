@@ -36,6 +36,7 @@ extern enginefuncs_t *g_pengfuncsTable_Post;
 
 extern int SpawnForward;
 extern int ChangelevelForward;
+extern const char *g_CameraModel;
 extern int PlaybackForward;
 extern int DispatchKeyForward;
 extern int pfnTouchForward;

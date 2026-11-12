@@ -163,6 +163,18 @@ for key, vslot in keys:
     result.append((key, cof_slot))
     report.append(f"ok    {key}: {cls}::{hl_method} {vslot} -> {cof_slot}")
 
+# Cry of Fear's own keys (modules/hamsandwich/hook_native.cpp), for its functions whose parameters differ from
+# Half-Life's; their prototypes there must match these declarations
+COF_KEYS = [("cof_giveammo", "CBaseEntity", "GiveAmmo"), ("cof_item_holster", "CBasePlayerItem", "Holster"),
+            ("cof_stopfollowing", "CBaseMonster", "StopFollowing")]
+for key, cls, method in COF_KEYS:
+    slot = slot_of(cof.get(cls, []), method, None, cof_decl)
+    if slot is None:
+        report.append(f"skip  {key}: no single {cls}::{method} in Cry of Fear")
+        continue
+    result.append((key, slot))
+    report.append(f"ok    {key}: {cls}::{method} -> {slot}  ({cof_decl.get(method)})")
+
 OUT = os.path.join(ROOT, "gamedata", "common.games", "virtual.games", "cryoffear", "offsets-common.txt")
 with open(OUT, "w", newline="\r\n") as f:
     f.write("/**\n * Cry of Fear: Ham Sandwich virtual offsets, Windows, for the classes of ReCoF's game DLL.\n")

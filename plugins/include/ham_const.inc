@@ -4313,6 +4313,38 @@ enum Ham
 
 
 	/**
+	 * Items below here are Cry of Fear's own, for its functions whose parameters differ from Half-Life's; the
+	 * Half-Life keys of these functions are not set for Cry of Fear.
+	 */
+
+	/**
+	 * Description:		Gives ammo to the entity; noMessage leaves out the pickup message.
+	 *					This is Cry of Fear's GiveAmmo, which has one more parameter than Half-Life's Ham_GiveAmmo.
+	 * Forward params:	function(this, amount, const name[], max, const bool:noMessage)
+	 * Return type:		Integer.
+	 * Execute params:	ExecuteHam(Ham_CoF_GiveAmmo, this, amount, "type", max, noMessage);
+	 */
+	Ham_CoF_GiveAmmo,
+
+	/**
+	 * Description:		Puts the weapon away. Cry of Fear's takes no parameter, unlike Half-Life's Ham_Item_Holster.
+	 * Forward params:	function(this)
+	 * Return type:		None.
+	 * Execute params:	ExecuteHam(Ham_CoF_Item_Holster, this);
+	 */
+	Ham_CoF_Item_Holster,
+
+	/**
+	 * Description:		Stops following the leader; speakSentence (default 1) lets the monster say so.
+	 *					Cry of Fear's has one more parameter than Half-Life's Ham_StopFollowing.
+	 * Forward params:	function(this, clearSchedule, speakSentence)
+	 * Return type:		None.
+	 * Execute params:	ExecuteHam(Ham_CoF_StopFollowing, this, clearSchedule, speakSentence);
+	 */
+	Ham_CoF_StopFollowing,
+
+
+	/**
 	 * DONT USE ME LOL
 	 */
 	HAM_LAST_ENTRY_DONT_USE_ME_LOL

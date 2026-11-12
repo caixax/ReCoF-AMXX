@@ -550,6 +550,10 @@ enum
 	Ham_SC_Player_LeftObserver,
 	Ham_SC_Player_IsObserver,
 
+	Ham_CoF_GiveAmmo,
+	Ham_CoF_Item_Holster,
+	Ham_CoF_StopFollowing,
+
 	HAM_LAST_ENTRY_DONT_USE_ME_LOL
 };
 

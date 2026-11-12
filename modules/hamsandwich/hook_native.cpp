@@ -578,6 +578,11 @@ hook_t hooklist[] =
 	{ V("sc_player_enteredobserver",Void_Void) },
 	{ V("sc_player_leftobserver",	Void_Void) },
 	{ V("sc_player_isobserver",		Bool_Void) },
+
+	// Cry of Fear: functions whose parameters differ from Half-Life's
+	{ V("cof_giveammo",				Int_Int_Str_Int_Bool) },
+	{ V("cof_item_holster",			Void_Void) },
+	{ V("cof_stopfollowing",		Void_Int_Int) },
 };
 
 

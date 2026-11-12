@@ -746,6 +746,21 @@
             {
                 "windows"  "151"
             }
+
+            "cof_giveammo"
+            {
+                "windows"  "37"
+            }
+
+            "cof_item_holster"
+            {
+                "windows"  "83"
+            }
+
+            "cof_stopfollowing"
+            {
+                "windows"  "144"
+            }
         }
     }
 }

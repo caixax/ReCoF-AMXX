@@ -88,3 +88,6 @@ plugins/compiled/
 *.amxx
 
 build_deps/
+
+# ReCoF build folder
+build-cof/

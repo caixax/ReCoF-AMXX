@@ -1,0 +1,751 @@
+/**
+ * Cry of Fear: Ham Sandwich virtual offsets, Windows, for the classes of ReCoF's game DLL.
+ * Written by support/cof/gen_ham.py; do not edit by hand.
+ *
+ * Generated from MSVC class layout reports of the Half-Life SDK and of ReCoF's src/dlls by matching each
+ * Half-Life key's method; keys whose method Cry of Fear lacks or declares differently are left out.
+ */
+
+"Games"
+{
+    "#default"
+    {
+        "Offsets"
+        {
+            "pev"
+            {
+                "windows"  "4"
+            }
+
+            "base"
+            {
+                "windows"  "0x0"
+            }
+
+            "spawn"
+            {
+                "windows"  "11"
+            }
+
+            "precache"
+            {
+                "windows"  "12"
+            }
+
+            "keyvalue"
+            {
+                "windows"  "13"
+            }
+
+            "objectcaps"
+            {
+                "windows"  "16"
+            }
+
+            "activate"
+            {
+                "windows"  "17"
+            }
+
+            "setobjectcollisionbox"
+            {
+                "windows"  "19"
+            }
+
+            "classify"
+            {
+                "windows"  "20"
+            }
+
+            "deathnotice"
+            {
+                "windows"  "21"
+            }
+
+            "traceattack"
+            {
+                "windows"  "24"
+            }
+
+            "takedamage"
+            {
+                "windows"  "25"
+            }
+
+            "takehealth"
+            {
+                "windows"  "26"
+            }
+
+            "killed"
+            {
+                "windows"  "27"
+            }
+
+            "bloodcolor"
+            {
+                "windows"  "28"
+            }
+
+            "tracebleed"
+            {
+                "windows"  "29"
+            }
+
+            "mymonsterpointer"
+            {
+                "windows"  "30"
+            }
+
+            "mysquadmonsterpointer"
+            {
+                "windows"  "31"
+            }
+
+            "gettogglestate"
+            {
+                "windows"  "32"
+            }
+
+            "addpoints"
+            {
+                "windows"  "33"
+            }
+
+            "addpointstoteam"
+            {
+                "windows"  "34"
+            }
+
+            "addplayeritem"
+            {
+                "windows"  "35"
+            }
+
+            "removeplayeritem"
+            {
+                "windows"  "36"
+            }
+
+            "getdelay"
+            {
+                "windows"  "38"
+            }
+
+            "ismoving"
+            {
+                "windows"  "39"
+            }
+
+            "overridereset"
+            {
+                "windows"  "40"
+            }
+
+            "damagedecal"
+            {
+                "windows"  "41"
+            }
+
+            "settogglestate"
+            {
+                "windows"  "42"
+            }
+
+            "startsneaking"
+            {
+                "windows"  "43"
+            }
+
+            "stopsneaking"
+            {
+                "windows"  "44"
+            }
+
+            "oncontrols"
+            {
+                "windows"  "45"
+            }
+
+            "issneaking"
+            {
+                "windows"  "46"
+            }
+
+            "isalive"
+            {
+                "windows"  "47"
+            }
+
+            "isbspmodel"
+            {
+                "windows"  "48"
+            }
+
+            "reflectgauss"
+            {
+                "windows"  "49"
+            }
+
+            "hastarget"
+            {
+                "windows"  "50"
+            }
+
+            "isinworld"
+            {
+                "windows"  "51"
+            }
+
+            "isplayer"
+            {
+                "windows"  "52"
+            }
+
+            "isnetclient"
+            {
+                "windows"  "53"
+            }
+
+            "teamid"
+            {
+                "windows"  "54"
+            }
+
+            "getnexttarget"
+            {
+                "windows"  "55"
+            }
+
+            "think"
+            {
+                "windows"  "56"
+            }
+
+            "touch"
+            {
+                "windows"  "57"
+            }
+
+            "use"
+            {
+                "windows"  "58"
+            }
+
+            "blocked"
+            {
+                "windows"  "59"
+            }
+
+            "respawn"
+            {
+                "windows"  "60"
+            }
+
+            "updateowner"
+            {
+                "windows"  "61"
+            }
+
+            "fbecomeprone"
+            {
+                "windows"  "62"
+            }
+
+            "center"
+            {
+                "windows"  "63"
+            }
+
+            "eyeposition"
+            {
+                "windows"  "64"
+            }
+
+            "earposition"
+            {
+                "windows"  "65"
+            }
+
+            "bodytarget"
+            {
+                "windows"  "66"
+            }
+
+            "illumination"
+            {
+                "windows"  "67"
+            }
+
+            "fvisible"
+            {
+                "windows"  "69"
+            }
+
+            "fvecvisible"
+            {
+                "windows"  "68"
+            }
+
+            "look"
+            {
+                "windows"  "73"
+            }
+
+            "item_addtoplayer"
+            {
+                "windows"  "77"
+            }
+
+            "runai"
+            {
+                "windows"  "74"
+            }
+
+            "player_shouldfadeondeath"
+            {
+                "windows"  "75"
+            }
+
+            "item_getiteminfo"
+            {
+                "windows"  "79"
+            }
+
+            "changeyaw"
+            {
+                "windows"  "76"
+            }
+
+            "item_candeploy"
+            {
+                "windows"  "80"
+            }
+
+            "monsterthink"
+            {
+                "windows"  "77"
+            }
+
+            "item_deploy"
+            {
+                "windows"  "81"
+            }
+
+            "irelationship"
+            {
+                "windows"  "78"
+            }
+
+            "item_canholster"
+            {
+                "windows"  "82"
+            }
+
+            "monsterinit"
+            {
+                "windows"  "79"
+            }
+
+            "monsterinitdead"
+            {
+                "windows"  "80"
+            }
+
+            "item_updateiteminfo"
+            {
+                "windows"  "84"
+            }
+
+            "becomedead"
+            {
+                "windows"  "81"
+            }
+
+            "item_preframe"
+            {
+                "windows"  "85"
+            }
+
+            "item_postframe"
+            {
+                "windows"  "86"
+            }
+
+            "bestvisibleenemy"
+            {
+                "windows"  "83"
+            }
+
+            "item_drop"
+            {
+                "windows"  "87"
+            }
+
+            "finviewcone"
+            {
+                "windows"  "85"
+            }
+
+            "item_kill"
+            {
+                "windows"  "88"
+            }
+
+            "fvecinviewcone"
+            {
+                "windows"  "84"
+            }
+
+            "item_attachtoplayer"
+            {
+                "windows"  "89"
+            }
+
+            "checklocalmove"
+            {
+                "windows"  "86"
+            }
+
+            "item_primaryammoindex"
+            {
+                "windows"  "90"
+            }
+
+            "move"
+            {
+                "windows"  "87"
+            }
+
+            "item_secondaryammoindex"
+            {
+                "windows"  "91"
+            }
+
+            "moveexecute"
+            {
+                "windows"  "88"
+            }
+
+            "item_updateclientdata"
+            {
+                "windows"  "92"
+            }
+
+            "shouldadvanceroute"
+            {
+                "windows"  "89"
+            }
+
+            "item_getweaponptr"
+            {
+                "windows"  "93"
+            }
+
+            "getstoppedactivity"
+            {
+                "windows"  "90"
+            }
+
+            "item_itemslot"
+            {
+                "windows"  "96"
+            }
+
+            "stop"
+            {
+                "windows"  "91"
+            }
+
+            "weapon_extractammo"
+            {
+                "windows"  "97"
+            }
+
+            "checkrangeattack1"
+            {
+                "windows"  "92"
+            }
+
+            "weapon_extractclipammo"
+            {
+                "windows"  "98"
+            }
+
+            "checkrangeattack2"
+            {
+                "windows"  "93"
+            }
+
+            "weapon_addweapon"
+            {
+                "windows"  "99"
+            }
+
+            "checkmeleeattack1"
+            {
+                "windows"  "94"
+            }
+
+            "weapon_playemptysound"
+            {
+                "windows"  "100"
+            }
+
+            "checkmeleeattack2"
+            {
+                "windows"  "95"
+            }
+
+            "weapon_resetemptysound"
+            {
+                "windows"  "101"
+            }
+
+            "weapon_sendweaponanim"
+            {
+                "windows"  "102"
+            }
+
+            "weapon_isusable"
+            {
+                "windows"  "104"
+            }
+
+            "weapon_primaryattack"
+            {
+                "windows"  "105"
+            }
+
+            "weapon_secondaryattack"
+            {
+                "windows"  "106"
+            }
+
+            "weapon_reload"
+            {
+                "windows"  "112"
+            }
+
+            "schedulechange"
+            {
+                "windows"  "101"
+            }
+
+            "weapon_weaponidle"
+            {
+                "windows"  "113"
+            }
+
+            "weapon_retireweapon"
+            {
+                "windows"  "114"
+            }
+
+            "canplaysentence2"
+            {
+                "windows"  "103"
+            }
+
+            "weapon_shouldweaponidle"
+            {
+                "windows"  "115"
+            }
+
+            "playsentence"
+            {
+                "windows"  "104"
+            }
+
+            "weapon_usedecrement"
+            {
+                "windows"  "116"
+            }
+
+            "playscriptedsentence"
+            {
+                "windows"  "105"
+            }
+
+            "sentencestop"
+            {
+                "windows"  "106"
+            }
+
+            "getidealstate"
+            {
+                "windows"  "107"
+            }
+
+            "setactivity"
+            {
+                "windows"  "108"
+            }
+
+            "reportaistate"
+            {
+                "windows"  "109"
+            }
+
+            "checkenemy"
+            {
+                "windows"  "110"
+            }
+
+            "ftriangulate"
+            {
+                "windows"  "111"
+            }
+
+            "setyawspeed"
+            {
+                "windows"  "112"
+            }
+
+            "buildnearestroute"
+            {
+                "windows"  "113"
+            }
+
+            "findcover"
+            {
+                "windows"  "114"
+            }
+
+            "coverradius"
+            {
+                "windows"  "116"
+            }
+
+            "fcancheckattacks"
+            {
+                "windows"  "117"
+            }
+
+            "checkammo"
+            {
+                "windows"  "118"
+            }
+
+            "ignoreconditions"
+            {
+                "windows"  "119"
+            }
+
+            "fvalidatehinttype"
+            {
+                "windows"  "120"
+            }
+
+            "fcanactiveidle"
+            {
+                "windows"  "121"
+            }
+
+            "isoundmask"
+            {
+                "windows"  "122"
+            }
+
+            "hearingsensitivity"
+            {
+                "windows"  "125"
+            }
+
+            "barnaclevictimbitten"
+            {
+                "windows"  "126"
+            }
+
+            "barnaclevictimreleased"
+            {
+                "windows"  "127"
+            }
+
+            "preschedulethink"
+            {
+                "windows"  "129"
+            }
+
+            "getdeathactivity"
+            {
+                "windows"  "131"
+            }
+
+            "gibmonster"
+            {
+                "windows"  "132"
+            }
+
+            "hashumangibs"
+            {
+                "windows"  "134"
+            }
+
+            "hasaliengibs"
+            {
+                "windows"  "135"
+            }
+
+            "fademonster"
+            {
+                "windows"  "136"
+            }
+
+            "player_getgunposition"
+            {
+                "windows"  "138"
+            }
+
+            "deathsound"
+            {
+                "windows"  "139"
+            }
+
+            "alertsound"
+            {
+                "windows"  "140"
+            }
+
+            "idlesound"
+            {
+                "windows"  "141"
+            }
+
+            "painsound"
+            {
+                "windows"  "142"
+            }
+
+            "player_jump"
+            {
+                "windows"  "145"
+            }
+
+            "player_duck"
+            {
+                "windows"  "146"
+            }
+
+            "player_prethink"
+            {
+                "windows"  "147"
+            }
+
+            "player_postthink"
+            {
+                "windows"  "148"
+            }
+
+            "player_updateclientdata"
+            {
+                "windows"  "150"
+            }
+
+            "player_impulsecommands"
+            {
+                "windows"  "151"
+            }
+        }
+    }
+}

@@ -311,9 +311,11 @@ int	C_PrecacheSound(const char *s)
 
 		if (!g_bmod_cstrike)
 		{
-			PRECACHE_SOUND("weapons/cbar_hitbod1.wav");
-			PRECACHE_SOUND("weapons/cbar_hitbod2.wav");
-			PRECACHE_SOUND("weapons/cbar_hitbod3.wav");
+			// Cry of Fear has no crowbar sounds, so every client was asked for three files nobody has
+			const bool cryoffear = !stricmp(g_mod_name.chars(), "cryoffear");
+			PRECACHE_SOUND(cryoffear ? "debris/flesh1.wav" : "weapons/cbar_hitbod1.wav");
+			PRECACHE_SOUND(cryoffear ? "debris/flesh2.wav" : "weapons/cbar_hitbod2.wav");
+			PRECACHE_SOUND(cryoffear ? "debris/flesh3.wav" : "weapons/cbar_hitbod3.wav");
 		}
 	}
 

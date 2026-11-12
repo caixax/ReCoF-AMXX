@@ -2070,7 +2070,15 @@ static cell AMX_NATIVE_CALL user_slap(AMX *amx, cell *params) /* 2 param */
 					"weapons/cbar_hitbod2.wav",
 					"weapons/cbar_hitbod3.wav"
 				};
-				EMIT_SOUND_DYN2(pEdict, CHAN_VOICE, bit_sound[RANDOM_LONG(0, 2)], 1.0, ATTN_NORM, 0, PITCH_NORM);
+				// Cry of Fear has no crowbar sounds: the ones meta_api.cpp precaches for it instead
+				static const char *cof_sound[3] =
+				{
+					"debris/flesh1.wav",
+					"debris/flesh2.wav",
+					"debris/flesh3.wav"
+				};
+				const char **sounds = !stricmp(g_mod_name.chars(), "cryoffear") ? cof_sound : bit_sound;
+				EMIT_SOUND_DYN2(pEdict, CHAN_VOICE, sounds[RANDOM_LONG(0, 2)], 1.0, ATTN_NORM, 0, PITCH_NORM);
 			}
 		}
 

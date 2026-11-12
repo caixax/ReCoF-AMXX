@@ -1,3 +1,16 @@
+# ReCoF AMX Mod X
+
+AMX Mod X for the [ReCoF Server](https://github.com/caixax/ReCoF-Server), the Cry of Fear dedicated server, built against [ReCoF-HLSDK](https://github.com/caixax/ReCoF-HLSDK) (Cry of Fear's entity layout):
+
+- Ham Sandwich offsets for Cry of Fear (`gamedata/common.games/virtual.games/cryoffear`), generated from the class layouts of the Half-Life SDK and of ReCoF's game DLL by `support/cof/gen_ham.py`; `Ham_CoF_GiveAmmo`, `Ham_CoF_Item_Holster` and `Ham_CoF_StopFollowing` for the functions whose parameters differ from Half-Life's.
+- `cof.inc`: Cry of Fear's weapon, ammo, item and monster names and a few helpers, with notes for porting plugins.
+- The engine module's `set_view` camera no longer needs Half-Life's `models/rpgrocket.mdl`.
+- `plugins/testsuite/cof_selftest.sma` checks all of it on a server with a bot.
+
+Build (Windows): `python configure.py --enable-optimize --no-mysql --hlsdk=<ReCoF-HLSDK> --metamod=<metamod-hl1>` in a build folder, then `ambuild`. Everything else is upstream AMX Mod X, under its license; the original README follows.
+
+---
+
 
 <p align="center">
  <img src="https://github.com/alliedmodders/amxmodx/blob/master/editor/studio/AMXXLarge.bmp"/>

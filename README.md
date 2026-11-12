@@ -7,6 +7,8 @@ AMX Mod X for the [ReCoF Server](https://github.com/caixax/ReCoF-Server), the Cr
 - The engine module's `set_view` camera no longer needs Half-Life's `models/rpgrocket.mdl`.
 - `plugins/testsuite/cof_selftest.sma` checks all of it on a server with a bot.
 
+Writing plugins for Cry of Fear: [docs/cryoffear.md](docs/cryoffear.md), with an example plugin in `support/cof/examples`.
+
 Build (Windows): `python configure.py --enable-optimize --no-mysql --hlsdk=<ReCoF-HLSDK> --metamod=<metamod-hl1>` in a build folder, then `ambuild`. Everything else is upstream AMX Mod X, under its license; the original README follows.
 
 ---

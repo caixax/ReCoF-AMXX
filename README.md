@@ -1,5 +1,7 @@
 # ReCoF AMX Mod X
 
+[![Discord](https://img.shields.io/badge/Discord-join%20the%20server-5865F2?logo=discord&logoColor=white)](https://discord.gg/m63drEUJ4v)
+
 AMX Mod X for the [ReCoF Server](https://github.com/caixax/ReCoF-Server), the Cry of Fear dedicated server, built against [ReCoF-HLSDK](https://github.com/caixax/ReCoF-HLSDK) (Cry of Fear's entity layout):
 
 - Ham Sandwich offsets for Cry of Fear (`gamedata/common.games/virtual.games/cryoffear`), generated from the class layouts of the Half-Life SDK and of ReCoF's game DLL by `support/cof/gen_ham.py`; `Ham_CoF_GiveAmmo`, `Ham_CoF_Item_Holster` and `Ham_CoF_StopFollowing` for the functions whose parameters differ from Half-Life's.
